@@ -30,10 +30,6 @@ public class User {
         return password;
     }
 
-    public LocalDate getDateOfBirth() {
-        return dateOfBirth;
-    }
-
     @Override
     public String toString() {
         return "User{" +
@@ -45,7 +41,24 @@ public class User {
                 '}';
     }
 
+    public LocalDate getDateOfBirth() {
+        return dateOfBirth;
+    }
+
     @Override
+
+    public String toString() {
+        return "User{" +
+                "username='" + username + '\'' +
+                ", password='" + password + '\'' +
+                ", name='" + name + '\'' +
+                ", dateOfBirth=" + dateOfBirth +
+                ", telephoneNo='" + telephoneNo + '\'' +
+                '}';
+    }
+
+    @Override
+
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
