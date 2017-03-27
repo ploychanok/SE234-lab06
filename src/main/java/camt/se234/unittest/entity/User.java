@@ -45,17 +45,8 @@ public class User {
         return dateOfBirth;
     }
 
-    @Override
 
-    public String toString() {
-        return "User{" +
-                "username='" + username + '\'' +
-                ", password='" + password + '\'' +
-                ", name='" + name + '\'' +
-                ", dateOfBirth=" + dateOfBirth +
-                ", telephoneNo='" + telephoneNo + '\'' +
-                '}';
-    }
+
 
     @Override
 
