@@ -63,7 +63,7 @@ public class UserDaoImplTest {
 
     @Rule
     public ExpectedException thrown = ExpectedException.none();
-
+    @Test
     public void testLoginException()  {
         UserServiceImpl userService = new UserServiceImpl();
         UserDaoImpl userDao = new UserDaoImpl();
