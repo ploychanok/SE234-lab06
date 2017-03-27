@@ -26,6 +26,8 @@ public class UserServiceImplTest2 {
         assertThat(userService.isAbleToGoToPub(userService.login("Tucky","5675"), LocalDate.of(2017,3,20)), is(false));
         assertThat(userService.isAbleToGoToPub(userService.login("Honey","aabbcc"), LocalDate.of(2017,3,20)), is(false));
         assertThat(userService.isAbleToGoToPub(userService.login("None","none"), LocalDate.of(2017,3,20)), is(false));
+        thrown.expect(OldDateException.class);
+        thrown.expectMessage("User is not Born Yet");
 
     }
     @Test
@@ -37,8 +39,8 @@ public class UserServiceImplTest2 {
         userService.setUserDao(userDao);
         //
 
-        assertThat(userService.getPubAllowanceUser( LocalDate.of(2017,3,20)), hasItems(new User("Prayuth","1234","Tu",
-                LocalDate.of(1979,2,14),"08612345678")));
+//        assertThat(userService.getPubAllowanceUser( LocalDate.of(2017,3,20)), hasItems(new User("Prayuth","1234","Tu",
+//                LocalDate.of(1979,2,14),"08612345678")));
     }
     @Rule
     public ExpectedException thrown = ExpectedException.none();
