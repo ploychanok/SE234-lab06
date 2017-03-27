@@ -18,45 +18,69 @@ public class UserDaoImplTest {
     public void testGetUsers(){
         UserDaoImpl userDao = new UserDaoImpl();
         assertThat(userDao.getUsers(),
-                hasItems(new User("Prayuth","1234","Tu",
+                hasItems(
+//                        new User("se02","5675","SE02",
+//                                LocalDate.of(1999,1,1),"9999999999"),
+                        new User("Prayuth","1234","Tu",
                                 LocalDate.of(1979,2,14),"08612345678"),
                         new User("Tucky","5675","Tuckung",
                                 LocalDate.of(1999,8,30),"08687654321"),
 
-                        new User("se01","1234","SE01",
-                                LocalDate.of(1979,11,13),"0000000000"),
-                        new User("se02","5675","SE02",
-                                LocalDate.of(1999,8,30),"9999999999")
-                ));
-        assertThat(userDao.getUsers(),
-                contains(new User("Prayuth","1234","Tu",
-                                LocalDate.of(1979,2,14),"08612345678"),
-                        new User("Tucky","5675","Tuckung",
-                                LocalDate.of(1999,8,30),"08687654321"),
                         new User("Honey","aabbcc","Honey",
                                 LocalDate.of(2012,11,13),"0000000000"),
                         new User("None","none","NoName",
                                 LocalDate.of(2112,1,1),"9999999999"),
-
+                        new User("AA","DD","A",
+                                LocalDate.of(1979,2,14),"08612345678"),
+                        new User("BB","DDD","B",
+                                LocalDate.of(1999,8,30),"08687654321"),
                         new User("se01","1234","SE01",
                                 LocalDate.of(1979,11,13),"0000000000"),
                         new User("se02","5675","SE02",
-                                LocalDate.of(1999,8,30),"9999999999")
+                                LocalDate.of(1999,1,1),"9999999999")
+
                 ));
         assertThat(userDao.getUsers(),
-                containsInAnyOrder(new User("Prayuth","1234","Tu",
+                contains(//                        new User("se02","5675","SE02",
+//                                LocalDate.of(1999,1,1),"9999999999"),
+                        new User("Prayuth","1234","Tu",
                                 LocalDate.of(1979,2,14),"08612345678"),
                         new User("Tucky","5675","Tuckung",
                                 LocalDate.of(1999,8,30),"08687654321"),
+
                         new User("Honey","aabbcc","Honey",
                                 LocalDate.of(2012,11,13),"0000000000"),
                         new User("None","none","NoName",
                                 LocalDate.of(2112,1,1),"9999999999"),
-
+                        new User("AA","DD","A",
+                                LocalDate.of(1979,2,14),"08612345678"),
+                        new User("BB","DDD","B",
+                                LocalDate.of(1999,8,30),"08687654321"),
                         new User("se01","1234","SE01",
                                 LocalDate.of(1979,11,13),"0000000000"),
                         new User("se02","5675","SE02",
-                                LocalDate.of(1999,8,30),"9999999999")
+                                LocalDate.of(1999,1,1),"9999999999")
+                ));
+        assertThat(userDao.getUsers(),
+                containsInAnyOrder(//                        new User("se02","5675","SE02",
+//                                LocalDate.of(1999,1,1),"9999999999"),
+                        new User("Prayuth","1234","Tu",
+                                LocalDate.of(1979,2,14),"08612345678"),
+                        new User("Tucky","5675","Tuckung",
+                                LocalDate.of(1999,8,30),"08687654321"),
+
+                        new User("Honey","aabbcc","Honey",
+                                LocalDate.of(2012,11,13),"0000000000"),
+                        new User("None","none","NoName",
+                                LocalDate.of(2112,1,1),"9999999999"),
+                        new User("AA","DD","A",
+                                LocalDate.of(1979,2,14),"08612345678"),
+                        new User("BB","DDD","B",
+                                LocalDate.of(1999,8,30),"08687654321"),
+                        new User("se01","1234","SE01",
+                                LocalDate.of(1979,11,13),"0000000000"),
+                        new User("se02","5675","SE02",
+                                LocalDate.of(1999,1,1),"9999999999")
                 ) );
     }
 
